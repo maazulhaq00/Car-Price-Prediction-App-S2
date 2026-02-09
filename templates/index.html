@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Car Price Prediction</h3>
+    <form action="{{url_for('index')}}" method="post">
+        <label for="">
+            Milage
+            <input type="number" name="milage">
+        </label><br>
+        <label for="">
+            Age
+            <input type="number" name="age">
+        </label><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if price %}
+
+    <h4>The predicted price of car is ${{price}}</h4>
+
+    {% endif %}
+</body>
+
+</html>
